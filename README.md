@@ -1,83 +1,79 @@
-# Public Repository Workflow Configuration
+# Ropean's Repositories
 
-This file contains the workflow that should be placed in the **public repository** (`ropean/me`).
+[![Deploy to GitHub Pages](https://github.com/ropean/ropean.github.io/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/ropean/ropean.github.io/actions/workflows/deploy.yml)
+[![Live Site](https://img.shields.io/badge/live-ropean.github.io-blue)](https://ropean.github.io)
 
-## Purpose
+A responsive portfolio website showcasing all my GitHub repositories with detailed information and statistics.
 
-This workflow automatically deploys the `dist/` directory to GitHub Pages whenever changes are pushed to the main branch (from your private repository's build workflow).
+## 🚀 Live Site
 
-## Setup Instructions
+Visit the live site at [ropean.github.io](https://ropean.github.io)
 
-1. Go to your public repository: <https://github.com/ropean/me>
-2. Create the directory: `.github/workflows/`
-3. Create a file: `.github/workflows/deploy.yml`
-4. Copy and paste the content below into that file
-5. Commit and push
+## ✨ Features
 
-## Workflow File: `deploy.yml`
+- 📱 Fully responsive design - works seamlessly across all devices
+- 🎨 Modern UI built with React and Tailwind CSS
+- 📊 Real-time GitHub repository data
+- 🔍 Easy navigation and repository discovery
+- ⚡ Fast and optimized performance
 
-Place this in `ropean/me` repository at `.github/workflows/deploy.yml`:
+## 📸 Screenshots
 
-```yaml
-name: Deploy to GitHub Pages
+### Desktop View
 
-on:
-  # Trigger when main branch is updated (by private repo's build workflow)
-  push:
-    branches: ['main']
+<img src="screenshoots/half-screen.png" alt="Desktop View" width="800">
 
-  # Allow manual trigger
-  workflow_dispatch:
+### Tablet View
 
-# Permissions needed for GitHub Pages deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+<img src="screenshoots/ipad-mini.png" alt="iPad Mini View" width="600">
 
-# Allow only one concurrent deployment
-concurrency:
-  group: 'pages'
-  cancel-in-progress: false
+### Mobile View
 
-jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+<img src="screenshoots/iphone-14-pro-max.png" alt="iPhone 14 Pro Max View" width="300">
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+### Large Display View
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+<img src="screenshoots/nest-hub-max.png" alt="Nest Hub Max View" width="800">
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Deploy the dist directory
-          path: './dist'
+## 🛠️ Built With
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+- **React** - JavaScript library for building user interfaces
+- **Tailwind CSS** - Utility-first CSS framework for responsive styling
+- **GitHub Pages** - Hosting platform
+- **GitHub Actions** - Automated deployment workflow
+- **GitHub API** - Fetching repository data
+
+## 📁 Project Structure
+
+```
+ropean.github.io/
+├── .github/
+│   └── workflows/     # GitHub Actions deployment workflows
+├── docs/              # Built React application (GitHub Pages source)
+├── screenshoots/      # Website screenshots
+└── README.md
 ```
 
-## How It Works
+## 🚢 Deployment
 
-1. **Private repo** (`fetch-and-build.yml`) pushes updated `dist/` files to `ropean/me` main branch
-2. **Public repo** (`deploy.yml`) detects the push and automatically deploys `dist/` to GitHub Pages
-3. Your site is live at <https://ropean.github.io/me/>
+This site is automatically deployed to GitHub Pages using GitHub Actions. The workflow builds the React application and deploys it to the `docs` directory whenever changes are pushed to the main branch.
 
-## Enable GitHub Pages
+### Deployment Workflow
 
-After creating the workflow file, enable GitHub Pages:
+1. Code is pushed to the repository
+2. GitHub Actions workflow is triggered
+3. React app is built with production optimizations
+4. Built files are placed in the `docs` directory
+5. GitHub Pages serves the site from `docs`
 
-1. Go to repository Settings → Pages
-2. Under "Build and deployment":
-   - Source: **GitHub Actions**
-3. Save
+## 📄 License
 
-That's it! The deployment will happen automatically whenever the private repository pushes updates.
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📧 Contact
+
+Feel free to reach out through GitHub or visit my [portfolio](https://ropean.github.io) for more information.
+
+---
+
+Built with ❤️ by Ropean(<https://ropean.org>)
