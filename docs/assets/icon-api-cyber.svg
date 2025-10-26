@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <!-- Cyberpunk blue-purple gradient -->
+    <linearGradient id="cyberBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#581c87;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Neon glow gradient -->
+    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Electric pink accent -->
+    <linearGradient id="pinkAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f472b6;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glow effect for neon -->
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Stronger glow -->
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect x="2" y="2" width="96" height="96" rx="20" fill="url(#cyberBg)" />
+
+  <!-- Inner rounded square with glow -->
+  <rect x="8" y="8" width="84" height="84" rx="16" fill="none" stroke="url(#neonGlow)"
+    stroke-width="2" opacity="0.6" />
+
+  <!-- Even smaller inner square for depth -->
+  <rect x="14" y="14" width="72" height="72" rx="12" fill="none" stroke="url(#neonGlow)"
+    stroke-width="1" opacity="0.3" />
+
+  <!-- API Letters in rounded square boxes -->
+  <g filter="url(#strongGlow)">
+    <!-- Letter A box -->
+    <rect x="20" y="35" width="16" height="30" rx="4" fill="none" stroke="url(#pinkAccent)"
+      stroke-width="2.5" />
+    <!-- Letter A -->
+    <path d="M 24 58 L 28 42 L 32 58" stroke="#ffffff" stroke-width="2.5" fill="none"
+      stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="25.5" y1="52" x2="30.5" y2="52" stroke="#ffffff" stroke-width="2"
+      stroke-linecap="round" />
+
+    <!-- Letter P box -->
+    <rect x="42" y="35" width="16" height="30" rx="4" fill="none" stroke="url(#neonGlow)"
+      stroke-width="2.5" />
+    <!-- Letter P -->
+    <line x1="46" y1="42" x2="46" y2="58" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 46 42 L 52 42 C 54 42 54.5 44 54.5 46 C 54.5 48 54 50 52 50 L 46 50" stroke="#ffffff"
+      stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Letter I box -->
+    <rect x="64" y="35" width="16" height="30" rx="4" fill="none" stroke="url(#pinkAccent)"
+      stroke-width="2.5" />
+    <!-- Letter I -->
+    <line x1="72" y1="42" x2="72" y2="58" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="69" y1="42" x2="75" y2="42" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+    <line x1="69" y1="58" x2="75" y2="58" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Decorative tech elements -->
+  <g opacity="0.6">
+    <!-- Top corner brackets -->
+    <path d="M 15 20 L 15 15 L 20 15" stroke="url(#neonGlow)" stroke-width="2" fill="none"
+      stroke-linecap="round" />
+    <path d="M 85 20 L 85 15 L 80 15" stroke="url(#neonGlow)" stroke-width="2" fill="none"
+      stroke-linecap="round" />
+
+    <!-- Bottom corner brackets -->
+    <path d="M 15 80 L 15 85 L 20 85" stroke="url(#neonGlow)" stroke-width="2" fill="none"
+      stroke-linecap="round" />
+    <path d="M 85 80 L 85 85 L 80 85" stroke="url(#neonGlow)" stroke-width="2" fill="none"
+      stroke-linecap="round" />
+  </g>
+
+  <!-- Circuit-like dots -->
+  <g fill="#22d3ee" filter="url(#neonGlow)">
+    <circle cx="25" cy="25" r="1.5" />
+    <circle cx="75" cy="25" r="1.5" />
+    <circle cx="25" cy="75" r="1.5" />
+    <circle cx="75" cy="75" r="1.5" />
+    <circle cx="50" cy="25" r="1" />
+    <circle cx="50" cy="75" r="1" />
+  </g>
+
+  <!-- Status indicator dots -->
+  <g fill="url(#pinkAccent)" opacity="0.8">
+    <circle cx="50" cy="15" r="2" />
+    <circle cx="45" cy="15" r="1.5" />
+    <circle cx="55" cy="15" r="1.5" />
+  </g>
+</svg>
