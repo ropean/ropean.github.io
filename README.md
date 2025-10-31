@@ -45,26 +45,26 @@ Visit the live site at [ropean.github.io](https://ropean.github.io)
 
 ## 📁 Project Structure
 
-```
+```text
 ropean.github.io/
 ├── .github/
 │   └── workflows/     # GitHub Actions deployment workflows
-├── docs/              # Built React application (GitHub Pages source)
+├── dist/              # Built React application (GitHub Pages source)
 ├── screenshoots/      # Website screenshots
 └── README.md
 ```
 
 ## 🚢 Deployment
 
-This site is automatically deployed to GitHub Pages using GitHub Actions. The workflow builds the React application and deploys it to the `docs` directory whenever changes are pushed to the main branch.
+This site is automatically deployed to GitHub Pages using GitHub Actions. The workflow builds the React application and deploys it to the `dist` directory whenever changes are pushed to the main branch.
 
 ### Deployment Workflow
 
 1. Code is pushed to the repository
 2. GitHub Actions workflow is triggered
 3. React app is built with production optimizations
-4. Built files are placed in the `docs` directory
-5. GitHub Pages serves the site from `docs`
+4. Built files are placed in the `dist` directory
+5. GitHub Pages serves the site from `dist`
 
 ## 📄 License
 
