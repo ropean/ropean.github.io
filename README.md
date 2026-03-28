@@ -21,19 +21,19 @@ Visit the live site at [ropean.github.io](https://ropean.github.io)
 
 ### Desktop View
 
-<img src="screenshoots/half-screen.png" alt="Desktop View" width="800">
+![Desktop View](screenshoots/half-screen.png)
 
 ### Tablet View
 
-<img src="screenshoots/ipad-mini.png" alt="iPad Mini View" width="600">
+![iPad Mini View](screenshoots/ipad-mini.png)
 
 ### Mobile View
 
-<img src="screenshoots/iphone-14-pro-max.png" alt="iPhone 14 Pro Max View" width="300">
+![iPhone 14 Pro Max View](screenshoots/iphone-14-pro-max.png)
 
 ### Large Display View
 
-<img src="screenshoots/nest-hub-max.png" alt="Nest Hub Max View" width="800">
+![Nest Hub Max View](screenshoots/nest-hub-max.png)
 
 ## 🛠️ Built With
 
